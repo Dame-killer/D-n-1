@@ -34,6 +34,8 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 // Route::get('/student/home', [StudentController::class, 'home'])->name('student-home');
 
 Route::get('/academic_affairs/home', [AAController::class, 'home'])->name('aa-home');
+// Route::get('home', function () { return view('admin/home'); })->name('admin.home');
+Route::get('/academic_affairs/acount', function () { return view('academic_affairs/acount/index'); })->name('aa-acount');
 
 
 

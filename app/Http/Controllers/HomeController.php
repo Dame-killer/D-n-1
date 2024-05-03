@@ -26,11 +26,9 @@ class HomeController extends Controller
     public function index()
     {
         return redirect()->route('aa-home');
-        // $user = Auth::user();
-        // if($user->role == 1){
-        //     return redirect()->route('aa-home');
-        // }else {
-        //     return redirect()->route('student-home');
-        // }
+    }
+    public function acount()
+    {
+        return redirect()->route('acount');
     }
 }

@@ -11,3 +11,8 @@ class AAController extends Controller
         return view('academic_affairs.home');
     }
 }
+{
+    function acount(){
+        return view('academic_affairs.acount.index');
+    }
+}
