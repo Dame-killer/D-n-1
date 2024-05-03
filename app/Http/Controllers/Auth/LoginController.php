@@ -21,19 +21,19 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    // use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.
      *
-     * @var string
+    //  * @var string
      */
     // protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
      *
-     * @return void
+    //  * @return void
      */
     // public function __construct()
     // {
@@ -41,42 +41,42 @@ class LoginController extends Controller
     // }
 
     // GET: /admin/login
-    function viewLoginForm()
-    {
-        if (Auth::guard('user')->check()) {
-            return redirect()->route('aa-home');
-        }
-        return view('auth.login');
-    }
+    // function viewLoginForm()
+    // {
+    //     if (Auth::guard('user')->check()) {
+    //         return redirect()->route('aa-home');
+    //     }
+    //     return view('auth.login');
+    // }
 
     // POST: /admin/login
-    function login(Request $request)
-    {
-        // Bước 1: Lấy dữ liệu từ
-        $email = $request->input('email');
-        $password = $request->input('password');
+//     function login(Request $request)
+//     {
+//         // Bước 1: Lấy dữ liệu từ
+//         $email = $request->input('email');
+//         $password = $request->input('password');
 
-        // Bước 2: Đăng nhập
-        if (Auth::guard('user')->attempt([
-            'email' => $email,
-            'password' => $password
-        ])) {
-            // Chuyển hướng
-//            $request->session()->regenerate();
-            // Chuyển hướng về home admin
-            return redirect()->route('aa-home');
+//         // Bước 2: Đăng nhập
+//         if (Auth::guard('user')->attempt([
+//             'email' => $email,
+//             'password' => $password
+//         ])) {
+//             // Chuyển hướng
+// //            $request->session()->regenerate();
+//             // Chuyển hướng về home admin
+//             return redirect()->route('aa-home');
 
-        } else {
-            // Tro ve login -> su dung return back
-            flash()->addError('Đăng nhập thất bại!');
-            return redirect()->back();
-        }
-    }
+//         } else {
+//             // Tro ve login -> su dung return back
+//             flash()->addError('Đăng nhập thất bại!');
+//             return redirect()->back();
+//         }
+//     }
 
     // POST: /admin/logout
-    function logout()
-    {
-        Auth::guard('user')->logout();
-        return redirect()->route('login');
-    }
+    // function logout()
+    // {
+    //     Auth::guard('user')->logout();
+    //     return redirect()->route('login');
+    // }
 }

@@ -52,9 +52,9 @@
                     </div>
                     <ul class="navbar-nav  justify-content-end">
                         <li class="nav-item d-flex align-items-center">
-                            <form role="form" method="post" action="{{ route('logout') }}" id="logout-form">
+                            <form role="form" method="post" action="{{ route('home') }}" id="logout-form">
                                 @csrf
-                                <a href="{{ route('logout') }}"
+                                <a href="{{ route('home') }}"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                                     class="nav-link text-white font-weight-bold px-0">
                                     <i class="fa fa-user me-sm-1"></i>

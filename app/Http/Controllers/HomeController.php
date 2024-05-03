@@ -13,10 +13,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     /**
      * Show the application dashboard.
@@ -25,11 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = Auth::user();
-        if($user->role == 1){
-            return redirect()->route('aa-home');
-        }else {
-            return redirect()->route('student-home');
-        }
+        return redirect()->route('aa-home');
+        // $user = Auth::user();
+        // if($user->role == 1){
+        //     return redirect()->route('aa-home');
+        // }else {
+        //     return redirect()->route('student-home');
+        // }
     }
 }
